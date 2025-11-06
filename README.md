@@ -39,7 +39,7 @@ A sleek, modern Django web application with a black and gold theme, designed to 
 
 1. **Navigate to project directory**
    ```bash
-   cd /Users/arnavmohnalkar/Desktop/JFDC_APP
+   /JFDC_APP
    ```
 
 2. **Activate virtual environment**
