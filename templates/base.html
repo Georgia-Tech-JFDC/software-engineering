@@ -16,9 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- DIN-style Slab Serif Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Zilla Slab', 'Roboto Slab', 'Rockwell', 'DejaVu Serif', Georgia, serif;
+            font-weight: 400;
+        }
+        
+        .din-font {
+            font-family: 'Zilla Slab', 'Roboto Slab', 'Rockwell', 'DejaVu Serif', Georgia, serif;
         }
         
         .gradient-bg {
@@ -91,21 +99,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="{% url 'main:home' %}" class="text-2xl font-bold gradient-text">
+                <div class="flex-shrink-0 flex items-center space-x-3">
+                    {% load static %}
+                    <img src="{% static 'images/SGA_LOGO.jpg' %}" alt="SGA Logo" class="h-10 w-10 rounded-full">
+                    <a href="{% url 'main:home' %}" class="text-2xl font-bold gradient-text din-font">
                         JFDC
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="{% url 'main:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %} text-white hover:text-yellow-500 font-medium">
+                    <a href="{% url 'main:home' %}" class="nav-link din-font {% if request.resolver_match.url_name == 'home' %}active{% endif %} text-white hover:text-yellow-500 font-medium">
                         Home
                     </a>
-                    <a href="{% url 'main:projects' %}" class="nav-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %} text-white hover:text-yellow-500 font-medium">
+                    <a href="{% url 'main:projects' %}" class="nav-link din-font {% if request.resolver_match.url_name == 'projects' %}active{% endif %} text-white hover:text-yellow-500 font-medium">
                         Projects
                     </a>
-                    <a href="{% url 'main:logout' %}" class="text-white hover:text-yellow-500 font-medium flex items-center">
+                    <a href="{% url 'main:logout' %}" class="text-white hover:text-yellow-500 font-medium flex items-center din-font">
                         <i class="fas fa-sign-out-alt mr-2"></i>Logout
                     </a>
                 </div>
@@ -122,9 +132,9 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-yellow-600">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="{% url 'main:home' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md">Home</a>
-                <a href="{% url 'main:projects' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md">Projects</a>
-                <a href="{% url 'main:logout' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md">
+                <a href="{% url 'main:home' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md din-font">Home</a>
+                <a href="{% url 'main:projects' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md din-font">Projects</a>
+                <a href="{% url 'main:logout' %}" class="block px-3 py-2 text-white hover:bg-gray-900 rounded-md din-font">
                     <i class="fas fa-sign-out-alt mr-2"></i>Logout
                 </a>
             </div>

@@ -6,8 +6,12 @@
 <!-- Page Header -->
 <section class="bg-black py-20 border-b border-yellow-600">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-4">Our Projects</h1>
-        <p class="text-xl text-gray-400">Projects hosted by JFDC</p>
+        {% load static %}
+        <div class="flex justify-center mb-6">
+            <img src="{% static 'images/SGA_LOGO.jpg' %}" alt="SGA Logo" class="h-16 w-16 rounded-full shadow-lg">
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-4 din-font">Our Projects</h1>
+        <p class="text-xl text-gray-400 din-font">Projects hosted by JFDC</p>
     </div>
 </section>
 
@@ -30,15 +34,15 @@
                     <i class="fas fa-chart-line text-black text-6xl"></i>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-3">Analytics Dashboard</h3>
+                    <h3 class="text-2xl font-bold text-white mb-3 din-font">Analytics Dashboard</h3>
                     <p class="text-gray-400 mb-4">
                         Interactive financial data analysis and forecasting dashboard powered by Tableau.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-black border border-yellow-600 text-yellow-500 rounded-full text-sm">Financial Analysis</span>
-                        <span class="px-3 py-1 bg-black border border-yellow-600 text-yellow-500 rounded-full text-sm">Tableau</span>
+                        <span class="px-3 py-1 bg-black border border-yellow-600 text-yellow-500 rounded-full text-sm din-font">Financial Analysis</span>
+                        <span class="px-3 py-1 bg-black border border-yellow-600 text-yellow-500 rounded-full text-sm din-font">Tableau</span>
                     </div>
-                    <div class="flex items-center text-yellow-500 font-semibold">
+                    <div class="flex items-center text-yellow-500 font-semibold din-font">
                         <span>View Dashboard</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </div>
