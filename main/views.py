@@ -54,3 +54,9 @@ def analytics_dashboard(request):
     """Analytics Dashboard view"""
     return render(request, 'main/analytics_dashboard.html')
 
+
+@login_required
+def rso_document_checker(request):
+    """RSO Document Checker view"""
+    return render(request, 'main/rso_document_checker.html')
+

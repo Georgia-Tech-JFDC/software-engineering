@@ -9,5 +9,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('projects/', views.projects, name='projects'),
     path('analytics-dashboard/', views.analytics_dashboard, name='analytics_dashboard'),
+    path('rso-document-checker/', views.rso_document_checker, name='rso_document_checker'),
 ]
 
